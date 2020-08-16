@@ -1,8 +1,10 @@
 # Prática de DevOps com Docker
 
+![](.gitbook/assets/capa-devops.png)
+
 Seja bem vindo à **Prática de DevOps com Docker**.
 
-Este livro é parte de uma iniciativa de desenvolvimento de material de treinamento, ensino e aprendizagem, desenvolvido ao longo de 2020, para o disciplina de DevOps ofertda durante a pandemia.
+Este livro é parte de uma iniciativa de desenvolvimento de material de treinamento, ensino e aprendizagem, desenvolvido ao longo de 2020, para o disciplina de DevOps ofertda durante a pandemia.  
 
 A intenção é que seja um livro desenvolvido a várias mãos e, do mesmo modo, seja também atualizado a cada ano, durante cada nova oferta da disciplina.
 
