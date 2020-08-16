@@ -1,8 +1,12 @@
-# Introdução
+# Prática de DevOps com Docker
+
+Seja bem vindo à **Prática de DevOps com Docker**.
 
 Este livro é parte de uma iniciativa de desenvolvimento de material de treinamento, ensino e aprendizagem, desenvolvido ao longo de 2020, para o disciplina de DevOps ofertda durante a pandemia.
 
 A intenção é que seja um livro desenvolvido a várias mãos e, do mesmo modo, seja também atualizado a cada ano, durante cada nova oferta da disciplina.
+
+Ao longo deste livro você deve aprender o que é DevOps e como implementar um pipeline devops utilizando como base contêineres [Docker](https://www.docker.com/) e outras tecnologias relacionadas.
 
 Considera-se que a atualização de livros que façam extenso uso de tecnologias fundamental para o seu sucesso. Essa é outra razão pelo qual esse livro é redigido on-line e disponibilizado livremente desta forma. Com isso, todo e qualquer interessado no tema pode não apenas usufruir de seu conteúdo, mas também contribuir com o mesmo, se assim o desejar.
 
