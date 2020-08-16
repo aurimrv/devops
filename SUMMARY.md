@@ -5,11 +5,6 @@
 * [Uso do Livro](uso-do-livro.md)
 * [Contribua com o Livro](contribua-com-o-livro.md)
 * [Licença](licenca.md)
-
-## Organização do Livro
-
----
-
 * [Organização do Livro](organizacao-do-livro-1.md)
 
 ## Introdução
