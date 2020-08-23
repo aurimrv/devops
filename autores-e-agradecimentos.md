@@ -4,5 +4,7 @@ Este livro tem e terá vários autores. Trata-se de um livro desenvolvido de for
 
 O Prof. Auri Vincenzi é o idealizador e coordenador, entretanto, são vários os colaboradores que permitiram a escrita do conteúdo aqui disponibilizado. A cada ano, a lista de seus colaboradores é atualizada nessa página.
 
+Gabriel Alves é estudante de graduação no DC/UFSCar e tem experiência em DevOps, desde XXXX.
+
 Estudantes da Turma de 2020
 
