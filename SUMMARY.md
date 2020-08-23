@@ -7,36 +7,36 @@
 * [Licença](licenca.md)
 * [Organização do Livro](organizacao-do-livro-1.md)
 
-## Introdução
+## 1. Introdução <a id="introducao"></a>
 
-* [DevOps e Docker](introducao/devops-e-docker.md)
-* [Configuração do Ambiente](introducao/untitled.md)
+* [1.1 DevOps e Docker](introducao/devops-e-docker.md)
+* [1.2 Configuração do Ambiente](introducao/untitled.md)
 
-## Produção
+## 2. Produção <a id="producao"></a>
 
 * [Untitled](producao/untitled.md)
 
-## Monitoramento
+## 3. Monitoramento <a id="monitoramento"></a>
 
 * [Untitled](monitoramento/untitled.md)
 
-## Infraestrutura como Código
+## 4. Infraestrutura como Código <a id="infraestrutura-como-codigo"></a>
 
 * [Untitled](infraestrutura-como-codigo/untitled.md)
 
-## Orquestração
+## 5. Orquestração <a id="orquestracao"></a>
 
 * [Untitled](orquestracao/untitled.md)
 
-## Integração Contínua
+## 6. Integração Contínua <a id="integracao-continua"></a>
 
 * [Untitled](integracao-continua/untitled.md)
 
-## Pipeline de Entrega
+## 7. Pipeline de Entrega <a id="pipeline-de-entrega"></a>
 
 * [Untitled](pipeline-de-entrega/untitled.md)
 
-## Tópicos Avançados
+## 8. Tópicos Avançados <a id="topicos-avancados"></a>
 
 * [Untitled](topicos-avancados/untitled.md)
 
