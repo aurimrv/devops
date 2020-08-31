@@ -3,10 +3,15 @@
 Neste capítulo veremos como instalar e configurar o ambiente do Docker + Docker Compose que será utilizado nos capítulos a seguir.
 
 ## Windows
-- Faça o download do instalador do Docker Desktop [aqui](https://hub.docker.com/editions/community/docker-ce-desktop-windows/).
-- Abra o instalador e siga as instruções **(Importante: deixe a opção "Enable Hyper-V Windows Features" ativa!)**
-- Quando o processo de instalação terminar, reinicie o computador.
-- Tanto o Docker quanto o Docker Compose estarão instalados na sua máquina, e podem ser testados abrindo uma janela do Powershell e inserindo comandos como `docker run hello-world`.
+- Faça o download do instalador do Docker Desktop [aqui](https://hub.docker.com/editions/community/docker-ce-desktop-windows/);
+- Abra o instalador e siga as instruções **(Importante: deixe a opção "Enable Hyper-V Windows Features" ativa!)**;
+- Quando o processo de instalação terminar, reinicie o computador;
+- Ao reiniciar, abra o Docker Desktop para poder iniciar o daemon do docker;
+- Tanto o Docker quanto o Docker Compose estarão instalados e ativos na sua máquina, e podem ser testados abrindo uma janela do Powershell e inserindo comandos como `docker run hello-world`.
+> Obs: No Windows, o Docker Desktop também vem com um pequeno tutorial para começar a utilizar a ferramenta, pode ser útil.
+
+![Instalação no Windows](https://imgur.com/CWNhb64.jpg)
+
 
 ## Linux
 - Ubuntu:
