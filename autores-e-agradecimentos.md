@@ -7,3 +7,4 @@ O Prof. Auri Vincenzi é o idealizador e coordenador, entretanto, são vários o
 Gabriel Alves é estudante de graduação em Ciência da Computação no DC/UFSCar e tem experiência em DevOps desde 2018.
 
 Estudantes da Turma de 2020
+
