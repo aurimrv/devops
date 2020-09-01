@@ -1,6 +1,10 @@
 # 1.2 Configuração do Ambiente
 
-Neste capítulo veremos como instalar e configurar o ambiente do Docker + Docker Compose que será utilizado nos capítulos a seguir.
+Um dos grandes desafios no uso de tecnologias voltadas para o desenvolvimento de aplicações diz respeito à configurtação de ambientes para o desenvolvimento e execução do produto de software produzido. A cada novo colaborador que chega na organização, a preparação do ambiente de trabalho pode consumir um tempo significativo. 
+
+A tecnologia de contêineres surgiu para facilitar essa atividade e simplificar não apenas a configuração do ambiente de desenvolvimento, como também o ambiente de execução da aplicação. Utiliza-se muito hoje o termo _dockerização de aplicação_ para fazer referência a uma aplicação que não era executada em contêineres e passa a ser após a _dockerização_. 
+
+O primeiro passa para dar início a esse processo é instalar as ferramentas do Docker que iremos fazer uso. Neste capítulo veremos como instalar e configurar o ambiente do Docker + Docker Compose que será utilizado nos capítulos a seguir. Apesar de apresentarmos a instalação do Docker no ambiente Windows, é altamente recomendável que você faça uso da plataforma no ambiente Linux por este ser mais estável e alinhado com a filosofia do Docker. 
 
 ### Windows
 
