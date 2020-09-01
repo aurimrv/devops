@@ -10,7 +10,7 @@
 ## 1. Introdução <a id="introducao"></a>
 
 * [1.1 DevOps e Docker](introducao/devops-e-docker.md)
-* [1.2 Configuração do Ambiente](introducao/1.2-configuracao-do-ambiente.md)
+* [1.2 Configuração do Ambiente](introducao/configuracao-do-ambiente.md)
 
 ## 2. Produção <a id="producao"></a>
 
