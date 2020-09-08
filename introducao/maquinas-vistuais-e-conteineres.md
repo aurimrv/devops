@@ -12,15 +12,15 @@ Antes da possibilidade de virtualização, os servidores físicos, em geral, tin
 
 Virtualização de servidor é o que permite a execução de diversos servidores virtuais sobre o hardware de um único servidor físico, em geral, oferecendo um melhor uso dos recursos de hardware alí disponíveis \([DevMedia, 2014](https://www.devmedia.com.br/virtualizacao-de-servidores/30820)\). 
 
-Apesar de parecer algo novo, a virtualização de servidores teve início nos abos 60, dentro da IBM \([Silva, 2007](https://www.lncc.br/~borges/doc/Virtualizacao%20de%20Sistemas%20Operacionais.TCC.pdf)\). A figura abaixo, extraída de \([Chowdhury, 2015](https://www.linkedin.com/pulse/network-virtualization-101-prelude-dhiman-chowdhury)\), ilustra um timeline com a evolução da virtualização ao longo dos anos.
+Apesar de parecer algo novo, a virtualização de servidores teve início nos abos 60, dentro da IBM \([Silva, 2007](https://www.lncc.br/~borges/doc/Virtualizacao%20de%20Sistemas%20Operacionais.TCC.pdf)\). A figura abaixo, extraída de [Chowdhury, \(2015](https://www.linkedin.com/pulse/network-virtualization-101-prelude-dhiman-chowdhury)\), ilustra um timeline com a evolução da virtualização ao longo dos anos.
 
-![](https://agema.deltaww.com/UserFiles/images/Virtual%20Timeline.png)
+![Evolu&#xE7;&#xE3;o hist&#xF3;rica de virtuliza&#xE7;&#xE3;o e conteineriza&#xE7;&#xE3;o \(extra&#xED;da de Chowdhury, \(2015\)\)](https://agema.deltaww.com/UserFiles/images/Virtual%20Timeline.png)
 
 Basicamente, o que permite a virtualização de um servidor físico é a inclusão de uma camada adicional denominada de _hypervisor_. O modo hipervisor permite total controla da CPU no servidor físico e, a partir dele, o monitor de máquinas virtuais pode gerenciar cada sistema operacional contido em cada máquina virtual \(Silva, 2007\).
 
 A figura a seguir, extraída de [Hardren \(2014\)](https://www.devmedia.com.br/virtualizacao-de-servidores/30820), representa a camada do hypervisor \(virtualização\) em relação a uma arquitetuta de um servidor físico tradicional.
 
-![](https://arquivo.devmedia.com.br/artigos/Thiago_Handren/image2.png)
+![Ilustra&#xE7;&#xE3;o de um servidor sem e com recurso de virtualiza&#xE7;&#xE3;o \(extra&#xED;da de Hardren \(2014\)\)](https://arquivo.devmedia.com.br/artigos/Thiago_Handren/image2.png)
 
 Segundo [Hardren \(2014\)](https://www.devmedia.com.br/virtualizacao-de-servidores/30820), o Hypervisor ou Máquina Virtual de Sistema refere-se a camada de software responsável pela criação das máquinas virtuais individuais, garantindo às mesmas, o acesso aos recursos oferecidos pelo sistema físico.
 
