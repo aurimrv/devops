@@ -12,13 +12,13 @@ Antes da possibilidade de virtualização, os servidores físicos, em geral, tin
 
 Virtualização de servidor é o que permite a execução de diversos servidores virtuais sobre o hardware de um único servidor físico, em geral, oferecendo um melhor uso dos recursos de hardware alí disponíveis \([DevMedia, 2014](https://www.devmedia.com.br/virtualizacao-de-servidores/30820)\). 
 
-Apesar de parecer algo novo, a virtualização de servidores teve início nos abos 60, dentro da IBM \([Silva, 2007](https://www.lncc.br/~borges/doc/Virtualizacao%20de%20Sistemas%20Operacionais.TCC.pdf)\). A figura abaixo, extraída de [Chowdhury, \(2015](https://www.linkedin.com/pulse/network-virtualization-101-prelude-dhiman-chowdhury)\), ilustra um timeline com a evolução da virtualização ao longo dos anos.
+Apesar de parecer algo novo, a virtualização de servidores teve início nos anos 60, dentro da IBM \([Silva, 2007](https://www.lncc.br/~borges/doc/Virtualizacao%20de%20Sistemas%20Operacionais.TCC.pdf)\). A figura abaixo, extraída de [Chowdhury, \(2015](https://www.linkedin.com/pulse/network-virtualization-101-prelude-dhiman-chowdhury)\), ilustra um _timeline_ com a evolução da virtualização ao longo dos anos.
 
 ![Evolu&#xE7;&#xE3;o hist&#xF3;rica de virtuliza&#xE7;&#xE3;o e conteineriza&#xE7;&#xE3;o \(extra&#xED;da de Chowdhury, \(2015\)\)](../.gitbook/assets/timeline-virtualizacao.jpg)
 
-Basicamente, o que permite a virtualização de um servidor físico é a inclusão de uma camada adicional denominada de _hypervisor_. O modo hipervisor permite total controla da CPU no servidor físico e, a partir dele, o monitor de máquinas virtuais pode gerenciar cada sistema operacional contido em cada máquina virtual \(Silva, 2007\).
+Basicamente, o que permite a virtualização de um servidor físico é a inclusão de uma camada adicional denominada de _hypervisor_. O modo _hypervisor_ permite total controla da CPU no servidor físico e, a partir dele, o monitor de máquinas virtuais pode gerenciar cada sistema operacional contido em cada máquina virtual \(Silva, 2007\).
 
-A figura a seguir, extraída de [Hardren \(2014\)](https://www.devmedia.com.br/virtualizacao-de-servidores/30820), representa a camada do hypervisor \(virtualização\) em relação a uma arquitetuta de um servidor físico tradicional.
+A figura a seguir, extraída de [Hardren \(2014\)](https://www.devmedia.com.br/virtualizacao-de-servidores/30820), representa a camada do _hypervisor_ \(virtualização\) em relação a uma arquitetura de um servidor físico tradicional.
 
 ![Ilustra&#xE7;&#xE3;o de um servidor sem e com recurso de virtualiza&#xE7;&#xE3;o \(extra&#xED;da de Hardren \(2014\)\)](https://arquivo.devmedia.com.br/artigos/Thiago_Handren/image2.png)
 
@@ -64,7 +64,7 @@ A figura abaixo ilustra a arquitetura do sistema considerando contêineres.
 
 ![Exemplo de sistema com cont&#xEA;ineres \(extra&#xED;do de Valiante Filho \(2020\)\)](http://prof.valiante.info/_/rsrc/1517872817508/disciplinas/hardware/maquinas-virtuais-e-containers/VM_container.png)
 
-Como pode ser observado na figura, a principal distinção entre os contêineres e uma máquina virtual, é que o primeiro não possui um SO completo dentro dele e, desse modo, torna-se muito mais leve e demanda menos recursos para execução. Por essa razão, o termo _lightervisors_ é usado também para distinguí-los das máquinas virtuais.
+Como pode ser observado na figura, a principal distinção entre os contêineres e uma máquina virtual, é que o primeiro não possui um SO completo dentro dele e, desse modo, torna-se muito mais leve e demanda menos recursos para execução. Por essa razão, o termo _lightervisors_ é usado também para distingui-los das máquinas virtuais.
 
 Uma das plataformas mais conhecidas para uso de contêineres é o [Docker](https://www.docker.com/), mas existem outras tais como [Linux Conteiner \(LXC/LXD\)](https://linuxcontainers.org/), [Apache Mesos](http://mesos.apache.org/), [Rancher](https://rancher.com/), [Singularity](https://sylabs.io/singularity/), [Nanobox](https://nanobox.io/), [Packer](https://www.packer.io/), dentre outros.
 
@@ -83,23 +83,21 @@ Entretanto, contêineres também possuem limitações e desvantagens. Dentre ess
 
 ### Docker
 
-Pode-se dizer que o Docker, desenvolvido pela Docker Inc. é hoje considerado um ecossistema completo de containerização \([Red Hat, 2020](https://www.redhat.com/pt-br/topics/containers/what-is-docker)\).
+Pode-se dizer que o Docker, desenvolvido pela Docker Inc. é hoje considerado um ecossistema completo de conteinerização \([Red Hat, 2020](https://www.redhat.com/pt-br/topics/containers/what-is-docker)\).
 
 Inicialmente, o Docker fazia uso da tecnologia denominada [Linux Conteiner \(LXC/LXD\)](https://linuxcontainers.org/) como sendo a base para se comunicar com o kernel do Linux e prover seus serviços de contêineres. Basicamente, a tecnologia Docker faz uso do kernel do Linux e recursos disponíveis nesse sistema, tais como o [Cgroups](https://access.redhat.com/documentation/pt-br/red_hat_enterprise_linux/6/html/resource_management_guide/ch01) e [namespaces](https://pt.qwe.wiki/wiki/Linux_namespaces) para segregar processos, ou seja, garantir o isolamento entre contêineres  \([Red Hat, 2020](https://www.redhat.com/pt-br/topics/containers/what-is-docker)\).
 
-Desse modo, pode-se dizer que o LXC era de fundamental importância para o funcionamento do Docker. Entretanto, apesar de apoiar a comunidade do LXC/LXD, a empresa Docker Inc. tinha pouco controle da evolução do LXC/LXD o que, de certa forma, dificultava determinadas ações por parte da Docker Inc. para expandir sua tecnologia de containerização, além de ser difícil você confiar numa tecnologia de terceiros para dar suporte a um ponto crítico de sua aplicação.
+Desse modo, pode-se dizer que o LXC era de fundamental importância para o funcionamento do Docker. Entretanto, apesar de apoiar a comunidade do LXC/LXD, a empresa Docker Inc. tinha pouco controle da evolução do LXC/LXD o que, de certa forma, dificultava determinadas ações por parte da Docker Inc. para expandir sua tecnologia de conteinerização, além de ser difícil você confiar numa tecnologia de terceiros para dar suporte a um ponto crítico de sua aplicação.
 
 Desse modo, a Docker Inc. optou por construir a sua própria tecnologia pra se comunicar com o kernel , denominada de [libconteiner](https://github.com/docker-archive/libcontainer).
 
 Como surgiu no ambiente Linux, a grande maioria das imagens disponíveis no [Docker Hub](https://hub.docker.com/) \(nuvem que contém diversos tipos de imagens prontas para uso e criação de contêineres\) possui uma grande variedade de imagens que executam em Linux. Há também [imagens Windows](https://hub.docker.com/_/microsoft-windows-base-os-images) mas essas demanda licenças para serem utilizadas.
 
-
-
 Iniciativas como o Windows  [Subsystem for Linux \(WSL\)](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) passam a permitir a execução de contêineres Linux sobre o Windows. O Docker Desktop for Windows já faz isso utilizando tecnologias como VirtualBox e Hyper-V para viabilizar a execução de contêineres Linux sobre o Windows. Com a chegada do WSL2 essa integração do Docker com o ambiente Windows para a execução de contêineres Linux deve ser facilitada. Independente dessa evolução, e da disponibilidade de uma versão do Docker para Windows, o uso de Docker em ambiente Linux é mais estável e será dada prioridade a esse ambiente no contexto deste livro.
 
 #### Terminologia do Docker
 
-São vários os termos utilizados no contexto de containerização. Alguns temos básicos são listados abaixo e foram extraídos na íntegra do glossário criado pela Microsoft sobre o assunto: Terminologia do Docker \([Microsoft, 2020](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/docker-terminology)\). Uma lista mais detalhada pode ser obtida do próprio site da [documentação do Docker](https://docs.docker.com/glossary/).
+São vários os termos utilizados no contexto de conteinerização. Alguns temos básicos são listados abaixo e foram extraídos na íntegra do glossário criado pela Microsoft sobre o assunto: Terminologia do Docker \([Microsoft, 2020](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/docker-terminology)\). Uma lista mais detalhada pode ser obtida do próprio site da [documentação do Docker](https://docs.docker.com/glossary/).
 
 * **Imagem de contêiner**: um pacote com todas as dependências e informações necessárias para criar um contêiner. Uma imagem inclui todas as dependências \(como estruturas\), além da configuração de implantação e execução a ser usada por um runtime de contêiner. Geralmente, uma imagem deriva de várias imagens base que são camadas empilhadas umas sobre as outras para formar o sistema de arquivos do contêiner. Uma imagem é imutável depois de ser criada.
 * **Dockerfile**: um arquivo de texto que contém instruções para criar uma imagem do Docker. É como um script em lotes, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para instalar os programas necessários, copiar os arquivos e assim por diante, até obter o ambiente de trabalho que precisa.
