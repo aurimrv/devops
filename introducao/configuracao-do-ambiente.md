@@ -172,14 +172,10 @@ Chegando até aqui, recomendo a reinicialização da máquina e o teste do Docke
 * Verificando o status da execução do docker daemon
 
 ```text
-sudo systemctl restart docker.service
+sudo service docker status
 ```
 
 * Como resultado, esse comando irá apresentar algo parecido com o mostrado na imagem a seguir
-
-```text
-sudo service docker status
-```
 
 ![Tela ilustrando o status do docker-daemon ativo e em execu&#xE7;&#xE3;o](../.gitbook/assets/docker-daemon-status.png)
 
