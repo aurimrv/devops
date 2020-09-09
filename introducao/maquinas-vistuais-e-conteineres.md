@@ -114,7 +114,7 @@ docker build
 
    hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket. Aproveite e crie uma conta no Docker Hub o que permite que você poste imagens de contêineres que você venha a desenvolver.
 
-* **Compose**: uma ferramenta de linha de comando e formato de arquivo YAML com metadados para definir e executar aplicativos de vários contêineres. Você define um único aplicativo com base em várias imagens com um ou mais arquivos .yml que podem substituir valores dependendo do ambiente. Depois de criar as definições, você pode implantar todo o aplicativo de vários contêineres com um único comando \(docker-compose up\), que cria um contêiner por imagem no host do Docker.
+* **Compose**: uma ferramenta de linha de comando e formato de arquivo [YAML](https://yaml.org/spec/1.2/spec.html) com metadados para definir e executar aplicativos de vários contêineres. Você define um único aplicativo com base em várias imagens com um ou mais arquivos .yml que podem substituir valores dependendo do ambiente. Depois de criar as definições, você pode implantar todo o aplicativo de vários contêineres com um único comando \(docker-compose up\), que cria um contêiner por imagem no host do Docker.
 
 No decorrer do livro, outros termos que forem necessários serão explicados. Recomenda-se a leitura da Terminologia do Docker disponibilizado pela [Microsoft, \(2020\)](https://docs.microsoft.com/pt-br/dotnet/architecture/microservices/container-docker-introduction/docker-terminology). Na próxima seção discute-se o que Docker e contêineres tê a ver com DevOps \(Desenvolvimento e Operações\).
 
