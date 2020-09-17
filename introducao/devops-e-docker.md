@@ -19,7 +19,7 @@ Os pilares por trás do DevOps é decorrente dos métodos ágeis. Entretanto, ju
 
 Se considerarmos as práticas do DevOps em que as equipes de desenvolvimento e operações cooperam entre si, observamos que juntas elas desenvolvem, testam, implementam e monitoram aplicativos com velocidade, qualidade e controle, seguindo o que é chamado de Fluxo \(_Pipiline_\) DevOps. A figura abaixo, extraída de [Torre \(2020\)](https://docs.microsoft.com/pt-br/dotnet/architecture/containerized-lifecycle/), ilustra as etapas previstas num fluxo DevOps e a presença dos contêineres Docker para a realização de determinadas etapas do fluxo.
 
-![Fluxo de trabalho gen&#xE9;rico e para o ciclo de vida do aplicativo em cont&#xEA;ineres do Docker \(extra&#xED;d de Torre \(2020\)\)](https://docs.microsoft.com/pt-br/dotnet/architecture/containerized-lifecycle/docker-application-lifecycle/media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
+![Fluxo de trabalho gen&#xE9;rico e para o ciclo de vida do aplicativo em cont&#xEA;ineres do Docker \(extra&#xED;da de Torre \(2020\)\)](https://docs.microsoft.com/pt-br/dotnet/architecture/containerized-lifecycle/docker-application-lifecycle/media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 Como pode ser observado, há contêineres Docker viabilizando o ambiente de trabalho do Dev, no loop interno de desenvolvimento \(1\); na parte de contrução, integração contínua e teste \(3\), na entrega contínua \(4\); e no ambiente de gerenciamento e execução da aplicação \(5\), referente ao ambiente de procução.
 
