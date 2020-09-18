@@ -1,6 +1,6 @@
 # 2.1 Produção: o fim ou o início?
 
-Neste capítulo falamos sobre o ambiente de produção. Conforme comentado no livro "[DevOps na Prática: Entrega de Software Confiável a Automatizada](https://www.casadocodigo.com.br/products/livro-devops)", Sato argument que o ciclo de vida do software deveria iniciar somente apenas quando o usuário passasse a fazer uso do software.
+Neste capítulo falamos sobre o ambiente de produção. Conforme comentado no livro "[DevOps na Prática: Entrega de Software Confiável a Automatizada](https://www.casadocodigo.com.br/products/livro-devops)", Sato \(2018\) argumenta que o ciclo de vida do software deveria iniciar somente apenas quando o usuário passasse a fazer uso do software.
 
 Particularmente, considero uma afirmação interessante. Do ponto de vista de desenvolvimento de software, sabe-se que bons produtos de software ficam no mercado por mais de 20 anos. Desse modo, se comparado com o tempo de desenvolvimento do produto e o primeiro lançamento, pode-se dizer que o software passa muito mais tempo em manutenção do que em desenvolvimento.
 
