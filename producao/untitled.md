@@ -10,19 +10,19 @@ Recapitulando a figura do Capítulo 1 que ilustra um fluxo DevOps, esse capítul
 
 ![Fluxo de trabalho gen&#xE9;rico e para o ciclo de vida do aplicativo em cont&#xEA;ineres do Docker \(extra&#xED;da de Torre \(2020\)\)](https://docs.microsoft.com/pt-br/dotnet/architecture/containerized-lifecycle/docker-application-lifecycle/media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
-Será utilizado como exemplo, o código de uma loja virtual web, o mesmo utilizado por [Sato em seu livro DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops), mas, ao contrário daquele que fazia uso do Vagrant e Máquinas Virtuais para a instanciação do ambiente de produção, aqui faremos uso do Docker e contêineres.
+Será utilizado como exemplo, o código de uma loja virtual web, o mesmo utilizado por [Sato \(2018\) em seu livro DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops), mas, ao contrário daquele que fazia uso do Vagrant e Máquinas Virtuais para a instanciação do ambiente de produção, aqui faremos uso do Docker e contêineres.
 
 ### 2.1.1 Aplicação exemplo: loja virtual
 
-O objeto do livro é ensinar conceitos de DevOps e não de desenvolvimento de software. Desse modo, faremos uso de uma aplicação já pronta para explorar os conceitos de conteinerização e Docker. Caso deseje, você pode utilizar uma aplicação que tenha familiaridade ou então utilizar a loja virtual do exemplo abaixo. Como citado anteriormente, é a mesma aplicação utilizada no livro [DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops), por se tratar de uma aplicação mais antiga, buscou-se por contêineres mais próximos da versão original do código, mesmo assim, foram feitas atualizações nas versões dos Plugings do Maven para torná-la compatível e poder ser executada. Trata-se de uma aplicação web escrita em Java e que faz uso da plataforma Broadleaf Commerce \([http://www.broadleafcommerce.org/](http://www.broadleafcommerce.org/)\) para oferecer todos os recursos de uma loja virtual. A aplicação excuta em um contêiner Tomcat versão 7 e também necessita de um banco de dados MySQL versão 5.6 que, no nosso caso, estará em outro contêiner. 
+O objeto do livro é ensinar conceitos de DevOps e não de desenvolvimento de software. Desse modo, faremos uso de uma aplicação já pronta para explorar os conceitos de conteinerização e Docker. Caso deseje, você pode utilizar uma aplicação que tenha familiaridade ou então utilizar a loja virtual do exemplo abaixo. Como citado anteriormente, é a mesma aplicação utilizada no livro [DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops), por se tratar de uma aplicação mais antiga, buscou-se por contêineres mais próximos da versão original do código, mesmo assim, foram feitas atualizações nas versões dos Plugings do Maven para torná-la compatível e poder ser executada. Trata-se de uma aplicação web escrita em Java e que faz uso da plataforma _Broadleaf Commerce_ \([http://www.broadleafcommerce.org/](http://www.broadleafcommerce.org/)\) para oferecer todos os recursos de uma loja virtual. A aplicação executa em um contêiner Tomcat versão 7 e também necessita de um banco de dados MySQL versão 5.6 que, no nosso caso, estará em outro contêiner. 
 
 Repositório da aplicação: [https://github.com/aurimrv/loja-virtual-devops/](https://github.com/aurimrv/loja-virtual-devops/)
 
 Um ponto importante a ser ressaltado é que, para compilar essa versão da aplicação será necessário fazer uso do Java 1.8.0. Eu utilizei o [JDK 1.8 da Oracle](https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html). Além disso, assume-se que o `git` e o `maven` estejam instalados e funcionando. 
 
-Para mais detalhes sobre o Broadleaf Commerce sugiro a leitura da Seção 2.1, do Capítulo 2, do livro [DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops) ou mesmo da documentação oficial em [http://www.broadleafcommerce.org/](http://www.broadleafcommerce.org/).
+Para mais detalhes sobre o _Broadleaf Commerce_ sugiro a leitura da Seção 2.1, do Capítulo 2, do livro [DevOps na Prática](https://www.casadocodigo.com.br/products/livro-devops) ou mesmo da documentação oficial em [http://www.broadleafcommerce.org/](http://www.broadleafcommerce.org/).
 
-Para gerar o arquivo .war para o deploy no servidor Web basta os comandos abaixo:
+Para gerar o arquivo `.war` para o deploy no servidor Web basta os comandos abaixo:
 
 ```text
 $ git clone https://github.com/aurimrv/loja-virtual-devops/
@@ -81,7 +81,7 @@ O arquivo que será utilizado para o deploy no servidor web estará localizado e
 
 Para essa atividade, mesmo que não tenha conseguido gerar o arquivo acima, você pode continuar pois o mesmo será disponibilizado, já compilado, para a criação da imagem do contêiner do servidor, na Seção 2.4.
 
-De modo geral, a aplicação da loja virtual faz uso de uma série de tecnologias Java, tais como frameworks, e servidores de aplicação, além de banco de dados MySQL. Desse modo, seu processo de instalação e configuração corresponde ao de uma aplicação Java completa pois a mesma faz uso de diferentes tecnologias comumente utilizadas em aplicações Java para a web. A figura abaixo, adapta de [Sato](https://www.casadocodigo.com.br/products/livro-devops), ilustra a composição do ambiente de produção.
+De modo geral, a aplicação da loja virtual faz uso de uma série de tecnologias Java, tais como frameworks, e servidores de aplicação, além de banco de dados MySQL. Desse modo, seu processo de instalação e configuração corresponde ao de uma aplicação Java completa pois a mesma faz uso de diferentes tecnologias comumente utilizadas em aplicações Java para a web. A figura abaixo, adapta de [Sato \(2018\)](https://www.casadocodigo.com.br/products/livro-devops), ilustra a composição do ambiente de produção.
 
 ![Ambiente de Produ&#xE7;&#xE3;o \(adaptado de DevOps na Pr&#xE1;tica\)](../.gitbook/assets/figura-ambiente-producao.png)
 
