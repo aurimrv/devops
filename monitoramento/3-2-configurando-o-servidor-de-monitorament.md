@@ -114,7 +114,7 @@ docker exec -it 26d55ffcbe1b bash
 
 Estando no prompt do contêiner em execução, a lista de comandos de verificação disponível pode ser consultada em `/opt/nagios/libexec`. Há verificações dos mais diversos tipos para garantirem a execução dos serviços que desejamos.
 
-Por exemplo, a primeira verificação disponível nesse diretório, `check_apt`, é uma que faz a verificação do `apt`, gerenciador de pacotes das distribuições Debian. Ao chamar `check_apt -u`, é executado o comando `apt update` no host e, posteriormente, o resultado é exibido.
+Por exemplo, a primeira verificação disponível nesse diretório, `check_apt`, faz a verificação do `apt`, gerenciador de pacotes das distribuições Debian. Ao chamar `check_apt -u`, é executado o comando `apt update` no host e, posteriormente, o resultado é exibido.
 
 Ao executar essa verificação em dado host é possível descobrir se há pacotes que necessitam ser atualizados. No caso abaixo, como pode ser observado, existem 154 pacotes que poderiam ser atualizados na imagem desse contêiner.
 
