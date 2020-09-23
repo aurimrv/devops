@@ -2,7 +2,7 @@
 
 Conforme comentado, a verificação do status de servidores e serviços oferecidos pelo Nagios é feita por meio de comandos específicos para cada tipo de verificação desejada.
 
-Tal comando, nada mais é do que um script que executa determinadas ações e devolve para  Sistema Operaciona \(SO\) um código de retorno indicando como foi seu encerramento. São vários scripts de verificação disponíveis e outros podem ser incluídos por meio de plugings ou até mesmo desenvolvidos por nós mesmos para realizar verificações específicas.
+Tal comando, nada mais é do que um script que executa determinadas ações e devolve para  Sistema Operaciona \(SO\) um código de retorno indicando como foi seu encerramento. São vários scripts de verificação disponíveis e outros podem ser incluídos por meio de plugins ou até mesmo desenvolvidos por nós mesmos para realizar verificações específicas.
 
 No contêiner com a instalação do Nagios que fizemos uso, os programas de verificação já disponíveis estão listados em `/opt/nagios/libexec`. Conforme mostra a figura abaixo.
 
@@ -16,7 +16,7 @@ Por exemplo, estando no prompt de comando do Servidor Nagios é possível consul
 ./check_http -H 172.17.0.3
 ```
 
-Por padrão, esse comando verifica se é possível a conexão via HTTP no host informado como parâmetro \(`172.17.0.3`\) no porto `80` que, no caso do Servidor Web com Tomcat não está disponível. Desse modo, o script retona um código indicador de erro para o SO. Para verificar qual o código de retorno do último comando em execução no `bash`, basta digitar `echo $?` e o código é exibido, conforme sequência de comandos e saídas abaixo. No caso, a consulta à conexão HTTP no host `172.17.0.3`no porto padrão `80` não foi bem sucedida e o código de retorno foi 2.
+Por padrão, esse comando verifica se é possível a conexão via HTTP no host informado como parâmetro \(`172.17.0.3`\) no porto `80` que, no caso do Servidor Web com Tomcat não está disponível. Desse modo, o script retorna um código indicador de erro para o SO. Para verificar qual o código de retorno do último comando em execução no `bash`, basta digitar `echo $?` e o código é exibido, conforme sequência de comandos e saídas abaixo. No caso, a consulta à conexão HTTP no host `172.17.0.3`no porto padrão `80` não foi bem sucedida e o código de retorno foi 2.
 
 ```text
 $ cd /opt/nagios/libexec
