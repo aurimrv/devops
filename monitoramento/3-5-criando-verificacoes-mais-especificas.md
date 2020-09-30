@@ -158,26 +158,32 @@ Entre as linhas 73 a 97 do arquivo abaixo, fazemos uso do define service. Em tod
 ###############################################################################
 # 'check_mysql' command definition
 define command{
-        command_name    check_mysql
-        command_line    /opt/nagios/libexec/check_mysql -H '$HOSTADDRESS$'
+    command_name    check_mysql
+    command_line    /opt/nagios/libexec/check_mysql -H '$HOSTADDRESS$'
 }
 
 # 'check_mysql_cmdlinecred' command definition
 define command{
-        command_name    check_mysql_cmdlinecred
-        command_line    /opt/nagios/libexec/check_mysql -H '$HOSTADDRESS$' -u '$ARG1$' -p '$ARG2$'
+    command_name    check_mysql_cmdlinecred
+    command_line    /opt/nagios/libexec/check_mysql -H '$HOSTADDRESS$' -u '$ARG1$' -p '$ARG2$'
 }
 
 # 'check_mysql_database' command definition
 define command{
-        command_name    check_mysql_database
-        command_line    /opt/nagios/libexec/check_mysql -d '$ARG3$' -H '$HOSTADDRESS$' -u '$ARG1$' -p '$ARG2$'
+    command_name    check_mysql_database
+    command_line    /opt/nagios/libexec/check_mysql -d '$ARG3$' -H '$HOSTADDRESS$' -u '$ARG1$' -p '$ARG2$'
 }
 
-# 'check_tomcat' command definition
-define command{
-        command_name    check_tomcat
-        command_line    /opt/nagios/libexec/check_http -H '$HOSTADDRESS$' -p '$ARG1$'
+# 'check_tomcat_http' regular port
+define command {
+	command_name      check_tomcat_http
+	command_line      /opt/nagios/libexec/check_http -H '$HOSTADDRESS$' -p '$ARG1$' -u '$ARG2$' -e 'HTTP/1.1 200 OK'
+}
+
+# 'check_tomcat_https' ssl port
+define command {
+	command_name      check_tomcat_https
+	command_line      /opt/nagios/libexec/check_http -H '$HOSTADDRESS$' --ssl=1 -p '$ARG1$' -u '$ARG2$' -e 'HTTP/1.1 200 OK'
 }
 
 
@@ -185,21 +191,20 @@ define command{
 # HOST DEFINITION
 ###############################################################################
 define host{
-        use					    linux-server
-        host_name 	    mysql-server
-        alias				    mysql-server
-        address				  172.17.0.2
-        hostgroups			linux-servers
-        check_command		check_mysql_database!loja!lojasecret!loja_schema
+    use					    linux-server
+    host_name 			mysql-server
+    alias				    mysql-server
+    address				  172.17.0.2
+    hostgroups			linux-servers
+    check_command		check_mysql_database!loja!lojasecret!loja_schema
 }
 
 define host{
-        use					    linux-server
-        host_name 			tomcat-server
-        alias				    tomcat-server
-        address				  172.17.0.3
-        hostgroups			linux-servers
-        check_command		check_tomcat!8080
+    use					    linux-server
+    host_name 			tomcat-server
+    alias				    tomcat-server
+    address				  172.17.0.3
+    hostgroups			linux-servers
 }
 
 ###############################################################################
@@ -221,38 +226,38 @@ define hostgroup {
 ###############################################################################
 # SERVICES DEFINITION
 ###############################################################################
-define service {
+define service{
     use                     local-service,graphed-service
     hostgroup_name			    db-servers             
     service_description     PING
-  	check_command			      check_ping!100.0,20%!500.0,60%
+    check_command			      check_ping!100.0,20%!500.0,60%
 }
 
-define service {
+define service{
     use                     local-service,graphed-service
     hostgroup_name			    db-servers
     service_description     TCP
-  	check_command			      check_tcp!3306
+    check_command			      check_tcp!3306
 }
 
-define service {
+define service{
     use                     local-service,graphed-service
     hostgroup_name			    web-servers
-    service_description     TCP
-  	check_command 		      check_tcp!8080
+    service_description     Tomcat 
+    check_command			      check_tomcat_http!8080!'/devopsnapratica/'
 }
 
-define service {
+define service{
     use                     local-service,graphed-service
     hostgroup_name			    web-servers
-    service_description     TCPSSL
-  	check_command			      check_tcp!8443
+    service_description     Tomcat SSL
+    check_command			      check_tomcat_https!8443!'/devopsnapratica/admin/'
 }
 ```
 
 Por exemplo, para os servidores do grupo `db-servers` estamos verificando a resposta ao `PING` e também a disponibilidade de conexão `TCP` no porto `3306`, utilizado pelo MySQL.
 
-Já para os servidores do grupo `web-servers` estamos testado a conexão `TCP` nos portos `8080` e `8443`, utilizados pelo Tomcat para a conexão normal e segura.
+Já para os servidores do grupo `web-servers` estamos testado a conexão via `HTTP` no portos `8080` e a conexão `HTTPS` no porto `8443`, utilizados pelo Tomcat para a conexão normal e segura.
 
 Desse modo, observa-se que o Nagios é uma ferramenta de monitoramento bastante versátil. Recomenda-se um estudo dos arquivos de configuração disponíveis em `/opt/nagios/etc/objects` para mais informações sobre o monitoramento de objetos como Nagios. Lá existem exemplos para o monitoramento de _switches_ e impressoras, dentre outros.
 
