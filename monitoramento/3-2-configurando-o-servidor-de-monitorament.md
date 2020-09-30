@@ -1,8 +1,8 @@
 # 3.2 Configurando o Servidor de Monitoramento
 
-Nesta seção iremos configurar o nosso supervisor. Para a sua instalação é possível seguir os passos descritos na Existem dois papéis principais quando se fala em sistemas de monitoramento, um deles é o de **supervisor**, ou seja, aquele elemento que é responsável pelo monitoramento em si de todos os demais elementos, que são os chamados **supervisionados**. No exemplo da figura acima, o Servidor de Monitoramento Nagios seria o supervisor e os Servidores Web e de Banco de Dados os supervisionados.
+Nesta sessão iremos configurar o nosso supervisor. Para a sua instalação é possível seguir os passos descritos na [documentação oficial](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/quickstart.html). Existem dois papéis principais quando se fala em sistemas de monitoramento, um deles é o de **supervisor**, ou seja, aquele elemento que é responsável pelo monitoramento em si de todos os demais elementos, que são os chamados **supervisionados**. No exemplo da figura acima, o Servidor de Monitoramento Nagios seria o supervisor e os Servidores Web e de Banco de Dados os supervisionados.
 
-[documentação oficial](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/quickstart.html). Entretanto, da mesma forma como fizemos com os Servidores Web e de Banco de Dados, vamos nos aproveitar de imagens já disponíveis no Docker Hub.
+Entretanto, da mesma forma como fizemos com os Servidores Web e de Banco de Dados, vamos nos aproveitar de imagens já disponíveis no Docker Hub.
 
 Ao pesquisar por Nagios no Docker Hub, aparecem várias imagens disponíveis. Vamos utilizar a mais popular, conforme destacado na imagem abaixo.
 
@@ -20,7 +20,7 @@ Para carregarmos a imagem e fazermos uso da mesma iremos proceder como fizemos c
 docker run -p 80:80 jasonrivers/nagios
 ```
 
-O comando acima fará o download da imagem `jasonrivers/nagios`e irá mapear o porto 80, exposto pelo contêiner ao porto local 80 de nossa máquina hospedeira de modo que, após iniciar o contêiner, o Nagios estará disponível na URL: [`http://localhost:80/`](http://localhost:80/). Se tudo correr bem, a saída do comando acima será simular a essa:[http://localhost:80/](http://localhost:80/)
+O comando acima fará o download da imagem `jasonrivers/nagios`e irá mapear o porto 80, exposto pelo contêiner ao porto local 80 de nossa máquina hospedeira de modo que, após iniciar o contêiner, o Nagios estará disponível na URL: [`http://localhost:80/`](http://localhost:80/). Se tudo correr bem, a saída do comando acima será simular a essa: [http://localhost:80/](http://localhost:80/)
 
 ```text
 Adding password for user nagiosadmin
@@ -93,7 +93,7 @@ No caso desta configuração do Nagios, por padrão, são verificados os serviç
 * _**Swap Usage**_ **\(Uso da Partição de Troca\)**: a partição de troca é utilizada, dentre outras coisas, para salvar o contexto de processos em execução e para paginação quando o espaço disponível na RAM não permite comportar a demanda de memória de todos os processos em execução. Assim sendo, monitorar a partição de troca permite identificar a carência de memória RAM ou seu esgotamento para que o servior execute adequadamente suas atividades.
 * _**Total Process**_ **\(Total de Processos\)**: permite avaliar a sobrecarga no servidor monitorando o número total de processos em execução no servidor. Quanto maior esse número, pior o desempenho do servidor.
 
-Esses são apenas alguns dos serviços de verificação realizados por padrão nessa configuração do contêiner do Nagios que estamos fazendo uso. Posteriormente, faremos uso de outras rotinas de verificação. O Nagios é extensível por meio de plugins e existem vários plugins que podem ser configurandos para estender a capacidade de monitoramento do Nagios. No contêiner atual, a lista de rotinas de verificação disponível está localizada em `/opt/nagios/libexec`. É possível, por exemplo, testar o uso das mesmas via linha de comando, após conectar no prompt do servidor em execução.
+Esses são apenas alguns dos serviços de verificação realizados por padrão nessa configuração do contêiner do Nagios que estamos fazendo uso. Posteriormente, faremos uso de outras rotinas de verificação. O Nagios é extensível por meio de plugins e existem vários plugins que podem ser configurados para estender a capacidade de monitoramento do Nagios. No contêiner atual, a lista de rotinas de verificação disponível está localizada em `/opt/nagios/libexec`. É possível, por exemplo, testar o uso das mesmas via linha de comando, após conectar no prompt do servidor em execução.
 
 Por exemplo, ao executar o comando `docker exec` abaixo, abrimos um prompt `bash` no contêiner em execução. Primeiro precisamos descobrir o `Continer ID` para podermos nos conectar ao mesmo.
 

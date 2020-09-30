@@ -61,7 +61,7 @@ Finalmente, resta definir quem será alertado em caso de problemas. Podemos aler
 
 Também por padrão, o Nagio traz um arquivo com uma configuração padrão localizado em `/opt/nagios/etc/objects/contacts.cfg`
 
-Para que possamos alterar esse arquivo de modo que o e-mail padrão passa a ser o nosso, a seguir é apresentada a configuração original e, em seguida, a configuração personalizada que faremos. Posteriormente, para que essa alteração faça efeito, iremos também alterar o nosso Dockerfile de modo que o conteúdo desse arquivo alterado substitua o conteúdo da imagem original e, numa próxima inicialização do servidor, os nossos dados não se percam.
+Para que possamos alterar esse arquivo de modo que o e-mail padrão passa a ser o nosso, a seguir é apresentada a configuração original e, em seguida, a configuração personalizada que faremos. Posteriormente, para que essa alteração faça efeito, iremos também alterar o nosso `Dockerfile` de modo que o conteúdo desse arquivo alterado substitua o conteúdo da imagem original e, numa próxima inicialização do servidor, os nossos dados não se percam.
 
 ```text
 ...
@@ -74,7 +74,7 @@ define contact {
 ...
 ```
 
-As linhas de 3 a 5 vamos manter conforme o original. O símbole de ";" no arquivo `cfg` é utilizado para incluir comentário no final das linhas. Além disso, iremos incluir algumas outras configurações e também alterar o endereço de e-mail conforme o desejado. A configuração final, no meu caso, segue abaixo:
+As linhas de 3 a 5 vamos manter conforme o original. O símbolo de ";" no arquivo `cfg` é utilizado para incluir comentário no final das linhas. Além disso, iremos incluir algumas outras configurações e também alterar o endereço de e-mail conforme o desejado. A configuração final, no meu caso, segue abaixo:
 
 ```text
 ...
@@ -249,7 +249,7 @@ $ cp /etc/postfix/sasl/sasl_passwd /opt/nagios/etc/objects/lojacfg/
 $ cp /etc/postfix/sasl/sasl_passwd.db /opt/nagios/etc/objects/lojacfg/
 ```
 
-Copiados esses arquivos, pode-se encerrar o contêiner para que o arquivo Dockerfile possa ser alterado e a imagem padrão do contêiner original possa ser reconstruída com as configurações corretas do Postfix.
+Copiados esses arquivos, pode-se encerrar o contêiner para que o arquivo `Dockerfile` possa ser alterado e a imagem padrão do contêiner original possa ser reconstruída com as configurações corretas do Postfix.
 
 Observe que os arquivos localizados em `lojacfg` devem ser copiados para a raiz do diretório onde o arquivo `Dockerfile` do servidor Nagios se encontra. Feito isso, basta remover os comentários das linhas do `Dockerfile` abaixo, reconstruir a imagem do Servidor Nagios, e executar um novo contêiner a partir da mesma que o envio de mensagens estará funcionando.
 

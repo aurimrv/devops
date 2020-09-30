@@ -40,7 +40,13 @@ Dessa estrutura, nesse primeiro momento, o diretório mais importante para nós 
 
 Uma forma simples de tentar compreender como são compostos os arquivos de configuração do Nagios é dando uma olhada nos exemplos presentes na pasta `objects`. Inclusive, um dos arquivos é chamado de `templates.cfg` e pode nos ajudar na criação dos nossos próprios arquivos `.cfg`. 
 
-Da mesma forma que fizemos com os servidores Web e de Banco de Dados, vamos criar um arquivo `Dockerfile` para personalizar a imagem padrão do Docker Hub para atender as nossas necessidades. Segue abaixo o conteúdo do `Dockerfile` e, em seguida, é apresentada a personalização necessária para incluir os servidores do ambiente de produção.
+Da mesma forma que fizemos com os servidores Web e de Banco de Dados, vamos criar um arquivo `Dockerfile` para personalizar a imagem padrão do Docker Hub para atender as nossas necessidades. Os arquivos referentes a esse capítulo, estão disponíveis no repositório do GitHub, indicado abaixo.
+
+[https://github.com/aurimrv/devops-extra/](https://github.com/aurimrv/devops-extra/)
+
+Para fazer uso, basta fazer o clone ou o 
+
+Segue abaixo o conteúdo do `Dockerfile` e, em seguida, é apresentada a personalização necessária para incluir os servidores do ambiente de produção.
 
 ```text
 FROM jasonrivers/nagios:latest
@@ -189,7 +195,7 @@ Para viabilizar que as alterações sejam visíveis imediatamente, vamos alterar
 
 No nosso arquivo de configuração original da loja virtual \(`loja_virtual.cfg`\) criamos apenas dois hosts para serem monitorados. A medida que o ambiente de produção cresce é interessante agruparmos os hosts por tipo de serviço oferecido e, desse modo, fica mais fácil atribuir o gerenciamento desse grupo de hosts para diferentes especialistas, por exemplo. Ou então, definir um conjunto de regras que não se aplica a um host individual, mas sim a todos os hosts de determinado tipo.
 
-No momento, como não incluímos os hosts `db-server` e `web-server` em qualquer grupo, se entrarmos no menu lateral na opção de Host Groups, o resultado é semelhando ao exibido na figura abaixo:
+No momento, como não incluímos os hosts `db-server` e `web-server` em qualquer grupo, se entrarmos no menu lateral na opção de **Host Groups**, o resultado é semelhando ao exibido na figura abaixo:
 
 ![Agrupamento padr&#xE3;o de hosts no Nagios](../.gitbook/assets/nagios-hostgroups-01.png)
 
@@ -235,13 +241,13 @@ Para alterar o arquivo `loja_virtual.cfg` conforme apresentado acima, podemos tr
 
 No caso do nosso ambiente de produção, além do grupo `linux-servers` já existem na configuração padrão do Nagios, foram pensados nesses dois outros grupos de hosts: `db-servers`, e `web-servers`. Desse modo, optamos por incluir tanto o `db-server` quanto o `web-server` no grupo do `linux-servers`, e também, cada um deles de forma individual em seus respectivos grupos.
 
-Para alterarmos o arquivo `loja_virtual.cfg` local, podemos utilizar o editor de texto de nossa preferência. No exemplo abaixo usou-se o [Sublime](https://www.sublimetext.com/3). Substituindo o conteúdo do arquivo original pelo exibido abaixo, ao salvar, será solicitado acesso de superusuário. Isso porque, quando fizemos a associação do diretório  local com o diretório do contêiner, durante a execução do `docker run`, o proprietário do diretório local mudou de dono e, desse modo, para escrever dentro dele é necessário ser superusuário. As imagens a seguir ilustram o arquivo alterado e a tentativa de salvamento.
+Para alterarmos o arquivo `loja_virtual.cfg` local, podemos utilizar o editor de texto de nossa preferência. No exemplo abaixo usou-se o [Sublime](https://www.sublimetext.com/3). Substituindo o conteúdo do arquivo original pelo exibido abaixo, ao salvar, será solicitado acesso de super-usuário. Isso porque, quando fizemos a associação do diretório  local com o diretório do contêiner, durante a execução do `docker run`, o proprietário do diretório local mudou de dono e, desse modo, para escrever dentro dele é necessário ser superusuário. As imagens a seguir ilustram o arquivo alterado e a tentativa de salvamento.
 
 ![](../.gitbook/assets/loja-virtual-cfg-01.png)
 
 ![](../.gitbook/assets/loja-virtual-cfg-02.png)
 
-Após salvar o arquivo, é possível verifcar se a alteração se refletiu dentro do contêiner. Para isso, basta usar o comando `docker exec` conforme abaixo:
+Após salvar o arquivo, é possível verificar se a alteração se refletiu dentro do contêiner. Para isso, basta usar o comando `docker exec` conforme abaixo:
 
 ```text
 docker exec -it nagios-server bash
@@ -267,11 +273,11 @@ Resta agora aplicar as alterações no servidor Nagios. Para isso, basta reinici
 
 ![Finalizar](../.gitbook/assets/nagios-restart-04.png)
 
-3\) Se tudo correr bem, os dados do arquivo `loja_virtual.cfg` serão recarregados e as informações sobre Host Groups serão atualizados, conforme ilustrado na tela a seguir.
+3\) Se tudo correr bem, os dados do arquivo `loja_virtual.cfg` serão recarregados e as informações sobre **Host Groups** serão atualizados, conforme ilustrado na tela a seguir.
 
 ![](../.gitbook/assets/nagios-restart-05.png)
 
-**IMPORTANTE:** caso alterarmos nosso arquivo `.cfg` de forma indevida ou com algum erro de sintaxe, ao tentar reinicializar o servidor podemos não conseguir e, nesse caso, teremos que descobrir o que esta errado e tentarmos restartar o processo novamente. Se não for possível pela interface do navegador, a solução é reiniciar desde a construção da imagem, descrito no início desta seção.
+**IMPORTANTE:** caso alterarmos nosso arquivo `.cfg` de forma indevida ou com algum erro de sintaxe, ao tentar reinicializar o servidor podemos não conseguir e, nesse caso, teremos que descobrir o que esta errado e tentarmos reiniciar o processo. Se não for possível pela interface do navegador, a solução é reiniciar desde a construção da imagem, descrito no início desta seção.
 
 No caso acima, conforme pode ser observado, a reinicialização ocorreu com sucesso e os três grupos de hosts foram formados.
 
