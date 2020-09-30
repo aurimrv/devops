@@ -72,5 +72,5 @@ Finalmente, cabe aqui uma ressalva. Conforme destacado por [Sato \(2018\)](https
 
 Caso necessite fazer uso desses recursos do Nagios, recomenda-se consultar a documentação oficial sobre os mesmos, indicadas acima, ou ainda realizar pesquisa na Internet sobre o assunto. Há muita documentação disponível sobre os mesmos. No que se refere a esse curso, faremos uso apenas dos verificadores que possam ser utilizados diretamente, sem a necessidade de execução de forma remota.
 
-A seguir, faremos usos de algumas verificações adicionais nos nossos servidores do ambiente de produção e vermos como tais verificadores podem ser incluídos no arquivo de configuração `loja_virtual.cfg`.
+A seguir, faremos usos de algumas verificações adicionais nos nossos servidores do ambiente de produção e veremos como tais verificadores podem ser incluídos no arquivo de configuração `loja_virtual.cfg`.
 
