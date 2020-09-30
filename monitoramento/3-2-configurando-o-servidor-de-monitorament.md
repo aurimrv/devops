@@ -20,7 +20,7 @@ Para carregarmos a imagem e fazermos uso da mesma iremos proceder como fizemos c
 docker run -p 80:80 jasonrivers/nagios
 ```
 
-O comando acima fará o download da imagem `jasonrivers/nagios`e irá mapear o porto 80, exposto pelo contêiner ao porto local 80 de nossa máquina hospedeira de modo que, após iniciar o contêiner, o Nagios estará disponível na URL: [`http://localhost:80/`](http://localhost:80/). Se tudo correr bem, a saída do comando acima será simular a essa: [http://localhost:80/](http://localhost:80/)
+O comando acima fará o download da imagem `jasonrivers/nagios`e irá mapear a porta `80`, exposta pelo contêiner na porta local `80` de nossa máquina hospedeira de modo que, após iniciar o contêiner, o Nagios estará disponível na URL: [`http://localhost:80/`](http://localhost:80/). Se tudo correr bem, a saída do comando acima será simular a essa: [http://localhost:80/](http://localhost:80/).
 
 ```text
 Adding password for user nagiosadmin
@@ -87,10 +87,10 @@ No caso desta configuração do Nagios, por padrão, são verificados os serviç
 
 * _**Current Load**_ **\(Carga Atual\)**: indica quão ocupada está a CPU do host. Segundo [Sato \(2028\)](https://www.casadocodigo.com.br/products/livro-devops), a carga é medida pela média móvel do tamanho da fila de processo aguardando para executar. Em situações de sobrecarga da CPU, a fila de processos em espera aumenta e, consequentemente, o tempo de execução também, gerando um alerta caso esse valor de carga atinja determinado limite definido na verificação.
 * _**Current Users**_ **\(Usuários Atuais\)**: indica quando usuários logados há no sistema, sendo uma maneira simples para a detecção de ataques de intrusão no nosso servidor.
-* **HTTP**:  verifica se o servidor esta aceitando conexões do tipo HTTP sendo que o padrão é verificar a conexão no porto 80, mas é possível também verificar a execução de serviços em portos diferentes, como será visto mais adiante.
+* **HTTP**:  verifica se o servidor esta aceitando conexões do tipo HTTP sendo que o padrão é verificar a conexão na porta 80, mas é possível também verificar a execução de serviços em portas diferentes, como será visto mais adiante.
 * **PING**: verificação simples se o servidor está em atividade, respondendo ao comando `ping`.
 * _**Root Partition**_ **\(Partição Principal\)**: faz uma verificação da partição principal do sistema, identificando o espaço disponível. Caso essa partição encha, certamente o servidor enfrentará problemas na execução de suas atividades.
-* _**Swap Usage**_ **\(Uso da Partição de Troca\)**: a partição de troca é utilizada, dentre outras coisas, para salvar o contexto de processos em execução e para paginação quando o espaço disponível na RAM não permite comportar a demanda de memória de todos os processos em execução. Assim sendo, monitorar a partição de troca permite identificar a carência de memória RAM ou seu esgotamento para que o servior execute adequadamente suas atividades.
+* _**Swap Usage**_ **\(Uso da Partição de Troca\)**: a partição de troca é utilizada, dentre outras coisas, para salvar o contexto de processos em execução e para paginação quando o espaço disponível na RAM não permite comportar a demanda de memória de todos os processos em execução. Assim sendo, monitorar a partição de troca permite identificar a carência de memória RAM ou seu esgotamento para que o servidor execute adequadamente suas atividades.
 * _**Total Process**_ **\(Total de Processos\)**: permite avaliar a sobrecarga no servidor monitorando o número total de processos em execução no servidor. Quanto maior esse número, pior o desempenho do servidor.
 
 Esses são apenas alguns dos serviços de verificação realizados por padrão nessa configuração do contêiner do Nagios que estamos fazendo uso. Posteriormente, faremos uso de outras rotinas de verificação. O Nagios é extensível por meio de plugins e existem vários plugins que podem ser configurados para estender a capacidade de monitoramento do Nagios. No contêiner atual, a lista de rotinas de verificação disponível está localizada em `/opt/nagios/libexec`. É possível, por exemplo, testar o uso das mesmas via linha de comando, após conectar no prompt do servidor em execução.

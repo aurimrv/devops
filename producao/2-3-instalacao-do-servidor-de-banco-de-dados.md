@@ -62,17 +62,17 @@ No nosso caso, a única coisa que fazemos dentro desse script é remover o usuá
 DELETE FROM mysql.user WHERE user = '';
 ```
 
-Finalmente, a última linha do Dockerfile indica que os contêineres criados a partir dessa imagem irão expor o porto 3306, que é o porto padrão de conexão ao banco MySQL. Isso é o que permite o acesso ao contêiner por uma aplicação externa ou até mesmo por outro contêiner.
+Finalmente, a última linha do Dockerfile indica que os contêineres criados a partir dessa imagem irão expor a porta 3306, que é a porta padrão de conexão ao banco MySQL. Isso é o que permite o acesso ao contêiner por uma aplicação externa ou até mesmo por outro contêiner.
 
 ```text
 EXPOSE 3306
 ```
 
-#### Contruindo a imagem do Servidor de Bando de Dados partir do Dockerfile
+#### Construindo a imagem do Servidor de Bando de Dados partir do Dockerfile
 
 Uma vez criado o Dockerfile e todos os recursos que ele utiliza estarem disponíveis é possível construir uma imagem atualizada para atender as nossas necessidades.
 
-Para facilitar a criação do nossos contêineres, no link abaixo é possível clonar o repositório que contém o Dockerfile e demias arquivos para a criação do nosso servidor MySQL.
+Para facilitar a criação do nossos contêineres, no link abaixo é possível clonar o repositório que contém o Dockerfile e demais arquivos para a criação do nosso servidor MySQL.
 
 ```text
 git clone https://github.com/aurimrv/devops-extra
@@ -174,7 +174,7 @@ docker inspect 3d386713c011
 
 Continuando, o segundo parâmetro, `-v data:/var/lib/mysql`, permite a criação de um volume de dados que pode ser compartilhado entre o sistema hospedeiro e o contêiner. No caso, o diretório local `data` será "conectado" ao diretório `/var/lib/mysql` do contêiner. Desse modo, dados existentes em `data` passam a ser visíveis dentro do contêiner e dados produzidos durante a execução do contêiner em `/var/lib/mysql` são salvos também fora do contêiner no diretório local `data`. Essa é uma forma de persistir os dados gerados pelo contêiner, mesmo após a sua destruição.
 
-O terceiro parâmetro `-p 3306:3306` ou `--publish` é permite publicar o porto de um contêiner para fora dele. Por padrão, um contêiner não publica seus portos para acesso externo. No caso de nossa imagem, informamos que ela iria expor o porto 3306. O parâmetro `-p` indica isso. O segundo número é o número do porto no contêiner, 3306, e o primeiro é qual número de porto queremos utilizar no localhost. No caso, optamos por usar o mesmo por não haver conflito. Mas poderia ser algo do tipo: `-p 3310:3306` , em que o porto 3306 do contêiner estará acessível no localhost no porto 3310, por exemplo.
+O terceiro parâmetro `-p 3306:3306` ou `--publish` é permite publicar a porta de um contêiner para fora dele. Por padrão, um contêiner não publica suas portas para acesso externo. No caso de nossa imagem, informamos que ela iria expor a porta `3306`. O parâmetro `-p` indica isso. O segundo número é o número da porta no contêiner, 3306, e o primeiro é qual número da porta queremos utilizar no `localhost`. No caso, optamos por usar o mesmo por não haver conflito. Mas poderia ser algo do tipo: `-p 3310:3306` , em que a porta `3306` do contêiner estará acessível no `localhost` na porta `3310`, por exemplo.
 
 Finalmente, o último parâmetro é o nome da imagem a partir da qual iremos criar um contêiner. No exemplo acima, o nome da imagem utilizada no comando `docker build` foi `mysql-server`.
 

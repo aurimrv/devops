@@ -60,7 +60,7 @@ ADD nagios.cfg /opt/nagios/etc/
 EXPOSE 80
 ```
 
-Em relação ao que já aprendemos sobre `Dockerfile` nas outras seções, esse arquivo não apresenta novidades. Basicamente, a partir da imagem original, 1\) incluímos na imagem um novo diretório e dentro dele um novo arquivo de configuração com as informações dos servidores desejados - `ADD lojacfg/loja_virtual.cfg /opt/nagios/etc/objects/lojacfg/`; 2\) indicamos ao Nagios que há um novo arquivo de configuração a ser utilizado fornecendo para a imagem um novo arquivo nagios.cfg - `ADD nagios.cfg /opt/nagios/etc/`; e 3\) expomos o porto 80 para permitir a conexão externa com o contêiner.
+Em relação ao que já aprendemos sobre `Dockerfile` nas outras seções, esse arquivo não apresenta novidades. Basicamente, a partir da imagem original, 1\) incluímos na imagem um novo diretório e dentro dele um novo arquivo de configuração com as informações dos servidores desejados - `ADD lojacfg/loja_virtual.cfg /opt/nagios/etc/objects/lojacfg/`; 2\) indicamos ao Nagios que há um novo arquivo de configuração a ser utilizado fornecendo para a imagem um novo arquivo `nagios.cfg` - `ADD nagios.cfg /opt/nagios/etc/`; e 3\) expomos a porta `80` para permitir a conexão externa com o contêiner.
 
 Para obter o arquivo original da imagem, denominado `nagios.cfg`, seguiram-se os mesmos passos para a obtenção dos arquivos originais do servidor Tomcat, descritos na última parte da Seção 2.4. Tendo uma cópia desse arquivo no disco local, a única alteração feita foi a inclusão da linha abaixo no final do arquivo:
 
@@ -141,7 +141,7 @@ docker run --name nagios-server \
 -p 80:80 nagios-server-img
 ```
 
-Observe que, da mesma forma que fizemos para os demais contêineres, atribuímos um nome a ele \(`nagios-server`\), associamos o diretório local contendo o arquivo de configuração da loja virtual \(`/home/auri/temp/devops-extra/cap-03/docker-nagios-image/lojacfg/`\) com o diretório dentro do contêiner \(`/opt/nagios/etc/objects/lojacfg/`\). Isso irá nos permitir editar o arquivo de configuração no host local e, após a edição, reiniciarmos o processo do Nagios no contêiner para avaliar as alterações na configuração. Finalmente, mapeamos o porto 80 do contêiner para o porto `80` do host local, de modo que o servidor de monitoramento pode ser acessado por meio do endereço [`http://localhost:80/`](http://localhost:80/).
+Observe que, da mesma forma que fizemos para os demais contêineres, atribuímos um nome a ele \(`nagios-server`\), associamos o diretório local contendo o arquivo de configuração da loja virtual \(`/home/auri/temp/devops-extra/cap-03/docker-nagios-image/lojacfg/`\) com o diretório dentro do contêiner \(`/opt/nagios/etc/objects/lojacfg/`\). Isso irá nos permitir editar o arquivo de configuração no host local e, após a edição, reiniciarmos o processo do Nagios no contêiner para avaliar as alterações na configuração. Finalmente, mapeamos a porta 80 do contêiner para a porta `80` do host local, de modo que o servidor de monitoramento pode ser acessado por meio do endereço [`http://localhost:80/`](http://localhost:80/).
 
 Parte da saída resultante do comando acima é apresentada abaixo. Ao final do processo, basta acessar o endereço [`http://localhost:80/`](http://localhost:80/) para ter acesso à instância do servidor de monitoramento.
 

@@ -255,9 +255,9 @@ define service{
 }
 ```
 
-Por exemplo, para os servidores do grupo `db-servers` estamos verificando a resposta ao `PING` e também a disponibilidade de conexão `TCP` no porto `3306`, utilizado pelo MySQL.
+Por exemplo, para os servidores do grupo `db-servers` estamos verificando a resposta ao `PING` e também a disponibilidade de conexão `TCP` na porta `3306`, utilizado pelo MySQL.
 
-Já para os servidores do grupo `web-servers` estamos testado a conexão via `HTTP` no portos `8080` e a conexão `HTTPS` no porto `8443`, utilizados pelo Tomcat para a conexão normal e segura.
+Já para os servidores do grupo `web-servers` estamos testado a conexão via `HTTP` na porta `8080` e a conexão `HTTPS` na porta `8443`, utilizados pelo Tomcat para a conexão normal e segura.
 
 Desse modo, observa-se que o Nagios é uma ferramenta de monitoramento bastante versátil. Recomenda-se um estudo dos arquivos de configuração disponíveis em `/opt/nagios/etc/objects` para mais informações sobre o monitoramento de objetos como Nagios. Lá existem exemplos para o monitoramento de _switches_ e impressoras, dentre outros.
 

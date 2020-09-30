@@ -1,10 +1,10 @@
 # 2.2 Ambiente de Produção
 
-Nessa seção, será apresentada uma forma de, utilizando contêineres Docker, nós instanciarmos cada um dos servidores necessários para o funcionamento da aplicação. Há inúmeras maneiras de fazermos isso com a tecnologia Docker. Vamos iniciar com uma mais simples e mais fácil de colocar em execução. Posteriormente, nos capítulos mais adiante, utilizaremos recursos mais avançados para o gerenciamento e instanciação dos diversos contêineres que copõem não apenas o ambiente de produção, mas todos os demais ambientes necessários para colocar o DevOps em prática.
+Nessa seção, será apresentada uma forma de, utilizando contêineres Docker, nós instanciarmos cada um dos servidores necessários para o funcionamento da aplicação. Há inúmeras maneiras de fazermos isso com a tecnologia Docker. Vamos iniciar com uma mais simples e mais fácil de colocar em execução. Posteriormente, nos capítulos mais adiante, utilizaremos recursos mais avançados para o gerenciamento e instanciação dos diversos contêineres que compõem não apenas o ambiente de produção, mas todos os demais ambientes necessários para colocar o DevOps em prática.
 
 Nesse ponto, assume-se que o Docker já está instalado e que você conseguiu executar com sucesso o Hello-World do Docker, apresentado no Capítulo 1, Seção 1.3.
 
-O próximo passo aqui criarmos as imagens para os nossos servidores web e bd utilizando Docker. O primeiro passo para isso é pesquisar no [Docker Hub](https://hub.docker.com/) pelas imagens já disponíveis e ver se tem alguma que nos atenda. Nesse repositório há imagens de diferentes tipos e pode ser que uma delas seja adequada para a nossa realidade.
+O próximo passo aqui criarmos as imagens para os nossos Servidores Web e BD utilizando Docker. O primeiro passo para isso é pesquisar no [Docker Hub](https://hub.docker.com/) pelas imagens já disponíveis e ver se tem alguma que nos atenda. Nesse repositório há imagens de diferentes tipos e pode ser que uma delas seja adequada para a nossa realidade.
 
 Uma forma de consultar por imagens de nosso interesse é utilizando o comando abaixo:
 

@@ -68,7 +68,7 @@ Um desses arquivos é dependente da instalação, que é o `context.xml`. Assim 
 </Context>
 ```
 
-Feita essa alteração é possível criar a imagem do Servidor Web. Antes disso, apenas a título de explicação, na linha 12 do `Dockerfile` é possível observar que está sendo exposto o porto `8080`. 
+Feita essa alteração é possível criar a imagem do Servidor Web. Antes disso, apenas a título de explicação, na linha 12 do `Dockerfile` é possível observar que está sendo exposto a porta `8080`. 
 
 Em seguida, na linha 14, executa-se o comando `chmod`, responsável pela definição dos atributos de execução do arquivo `catalina.sh`. Como o arquivo foi armazenado no repositório do GitHub e nossa cópia do arquivo é utilizada no Dockerfile para sobrescrever o arquivo original da imagem \(linha 5 do Dockerfile\), pode ser que suas permissões de execução estejam alteradas, causando erro na inicialização do servidor. Desse modo, por precaução, tais atributos são redefinidos antes de sua invocação na linha 16.
 
@@ -129,7 +129,7 @@ Finalizada a construção da imagem do servidor e estando ativo o contêiner exe
 docker run --name tomcat-server -p 8080:8080 tomcat-server-img
 ```
 
-De forma semelhante como fizemos com o Servidor de Bando de Dados, nomeamos esse servidor como `tomcat-server`, visando a facilitar a execução de outros comandos Docker sobre o contêiner criado. Além disso, mapeamos a porta `8080` do contêiner, para o porto `8080` local, de modo que a aplicação dique acessível via [http://localhost:8080/devopsnapratica/](http://localhost:8080/devopsnapratica/), no navegador do cliente.
+De forma semelhante como fizemos com o Servidor de Bando de Dados, nomeamos esse servidor como `tomcat-server`, visando a facilitar a execução de outros comandos Docker sobre o contêiner criado. Além disso, mapeamos a porta `8080` do contêiner, para a porta `8080` local, de modo que a aplicação dique acessível via [http://localhost:8080/devopsnapratica/](http://localhost:8080/devopsnapratica/), no navegador do cliente.
 
 Se tudo correr bem, a saída esperada é semelhante a mostrada abaixo:
 
@@ -266,7 +266,7 @@ Ao final desse processo, dentro da pasta `/usr/local/tomcat/conf/`será gerado o
 
 **Editando o arquivo `server.xml`**
 
-O próximo passo consiste na edição do arquivo `server.xml`, também localizado em `/usr/local/tomcat/conf/` para habilitar a autenticação por SSL no porto 8443. As alterações a serem feiras estão exibidas nas telas abaixo no antes e depois do arquivo `server.xml`. 
+O próximo passo consiste na edição do arquivo `server.xml`, também localizado em `/usr/local/tomcat/conf/` para habilitar a autenticação por SSL na porta 8443. As alterações a serem feiras estão exibidas nas telas abaixo no antes e depois do arquivo `server.xml`. 
 
 A primeira parte consiste em comentar uma linha do arquivo `server.xml`. As imagens abaixo ilustram o antes e o depois e destacam a linha comentada.
 
@@ -274,7 +274,7 @@ A primeira parte consiste em comentar uma linha do arquivo `server.xml`. As imag
 
 ![Linha comentada](../.gitbook/assets/nano-server-xml-depois-01.png)
 
-A segunda edição consiste em remover os comentários e habilitar a conexão via SSL no porto 8443, conforme as imagens abaixo demonstrando o antes e o depois.
+A segunda edição consiste em remover os comentários e habilitar a conexão via SSL na porta 8443, conforme as imagens abaixo demonstrando o antes e o depois.
 
 O texto inserido é esse mostrado no código abaixo.
 
