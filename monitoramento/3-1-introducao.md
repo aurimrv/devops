@@ -10,7 +10,7 @@ Para saber se há algo errado com nossa aplicação ou com os serviços e servid
 
 Claramente, realizar esse monitoramento de forma manual é praticamente impossível e, desse modo, faz-se necessária a disponibilidade de ferramentas que realiza esse monitoramento de forma automatizada e, havendo ocorrências que mereçam a ação humana, ela comunicará a equipe de operações para intervir e corrigir o problema, restaurando o serviço e colocando a aplicação no ar novamente, no menor tempo possível.
 
-[Nagios](https://www.nagios.org/). Tal ferramenta possui uma versão paga, com uma interface de configuração gráfica, e uma versão gratuita, denominada [Nagios Core](https://www.nagios.org/projects/nagios-core/), que pode ser configurada por arquivos de configuração. Trata-se de uma ferramenta que está a um bom tempo no mercado, é bastante robusta e, apesar de não ter uma interface muito amigável, faz o trabalho que se propõe.
+O [Nagios](https://www.nagios.org/) é uma dessas ferramentas de monitoramento que temos disponível. Tal ferramenta possui uma versão paga, com uma interface de configuração gráfica, e uma versão gratuita, denominada [Nagios Core](https://www.nagios.org/projects/nagios-core/), que pode ser configurada por arquivos de configuração. Trata-se de uma ferramenta que está a um bom tempo no mercado, é bastante robusta e, apesar de não ter uma interface muito amigável, faz o trabalho que se propõe.
 
 A título de ilustração, no restante deste capítulo vamos instanciar o Nagios Core para oferecer o suporte de monitoramento ao nossos ambiente de produção e, posteriormente, aos demais ambientes conteinerizados que forem criados. A figura abaixo ilustra o ambiente de produção com a inclusão do Servidor de Monitoramento.
 
