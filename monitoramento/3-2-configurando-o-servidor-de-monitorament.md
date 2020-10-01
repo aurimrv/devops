@@ -4,7 +4,7 @@ Nesta sessão iremos configurar o nosso supervisor. Para a sua instalação é p
 
 Entretanto, da mesma forma como fizemos com os Servidores Web e de Banco de Dados, vamos nos aproveitar de imagens já disponíveis no Docker Hub.
 
-Ao pesquisar por Nagios no Docker Hub, aparecem várias imagens disponíveis. Vamos utilizar a mais popular, conforme destacado na imagem abaixo.
+Ao pesquisar por [Nagios no Docker Hub](https://hub.docker.com/search?q=nagios&type=image), aparecem várias imagens disponíveis. Vamos utilizar a mais popular, conforme destacado na imagem abaixo.
 
 ![Disponibiliade de imagens Docker do Nagios](../.gitbook/assets/nagios-docker-hub-01.png)
 
