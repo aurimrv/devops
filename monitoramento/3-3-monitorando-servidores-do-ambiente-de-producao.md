@@ -90,14 +90,14 @@ define host{
         host_name 	mysql-server
         alias				mysql-server
         address			172.17.0.2
-        }
+}
 
 define host{
         use					linux-server
         host_name 	tomcat-server
         alias				tomcat-server
         address			172.17.0.3
-        }
+}
 ```
 
 O caractere \# indica comentário. Em seguida há uma seção de definição de host \(`define host`\). Nessa seção, circundada por chaves, indicamos qual o uso do host \(`use`\), qual o seu nome \(`host_name`\), qual o seu apelido \(`alias`\) e qual o seu endereço IP \(`address`\). A única informação que pode ser diferente aqui entre usuários é o número IP, o restante deve ser idêntico para todos nós.
