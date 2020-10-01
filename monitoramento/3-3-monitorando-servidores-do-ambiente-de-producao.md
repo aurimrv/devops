@@ -53,6 +53,11 @@ FROM jasonrivers/nagios:latest
 
 LABEL maintainer="auri@ufscar.br, g4briel.4lves@gmail.com"
 
+ENV NAGIOS_TIMEZONE="America/Sao_Paulo"
+
+RUN apt update
+RUN apt install -y vim nano
+
 ADD lojacfg/loja_virtual.cfg /opt/nagios/etc/objects/lojacfg/
 
 ADD nagios.cfg /opt/nagios/etc/
@@ -60,7 +65,7 @@ ADD nagios.cfg /opt/nagios/etc/
 EXPOSE 80
 ```
 
-Em relação ao que já aprendemos sobre `Dockerfile` nas outras seções, esse arquivo não apresenta novidades. Basicamente, a partir da imagem original, 1\) incluímos na imagem um novo diretório e dentro dele um novo arquivo de configuração com as informações dos servidores desejados - `ADD lojacfg/loja_virtual.cfg /opt/nagios/etc/objects/lojacfg/`; 2\) indicamos ao Nagios que há um novo arquivo de configuração a ser utilizado fornecendo para a imagem um novo arquivo `nagios.cfg` - `ADD nagios.cfg /opt/nagios/etc/`; e 3\) expomos a porta `80` para permitir a conexão externa com o contêiner.
+Em relação ao que já aprendemos sobre `Dockerfile` nas outras seções, esse arquivo não apresenta novidades. Basicamente, a partir da imagem original, 1\) fizemos uso de uma das variáveis de ambiente `NAGIOS_TIMEZONE`, declarada na documentação da imagem, para alterar o timezone do servidor, mostrando os horários no nosso fuso \(linha 5\);  2\) executamos a instaçlação de editores de texto básicos \(linhas 7 e 8\);  3\) incluímos na imagem um novo diretório e dentro dele um novo arquivo de configuração com as informações dos servidores desejados - `ADD lojacfg/loja_virtual.cfg /opt/nagios/etc/objects/lojacfg/` \(linha 10\); 4\) indicamos ao Nagios que há um novo arquivo de configuração a ser utilizado fornecendo para a imagem um novo arquivo `nagios.cfg` - `ADD nagios.cfg /opt/nagios/etc/`\(linha 12\);  e 5\) expomos a porta `80` para permitir a conexão externa com o contêiner.
 
 Para obter o arquivo original da imagem, denominado `nagios.cfg`, seguiram-se os mesmos passos para a obtenção dos arquivos originais do servidor Tomcat, descritos na última parte da Seção 2.4. Tendo uma cópia desse arquivo no disco local, a única alteração feita foi a inclusão da linha abaixo no final do arquivo:
 
