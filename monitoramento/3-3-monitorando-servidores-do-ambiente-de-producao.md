@@ -44,7 +44,7 @@ Da mesma forma que fizemos com os servidores Web e de Banco de Dados, vamos cria
 
 [https://github.com/aurimrv/devops-extra/](https://github.com/aurimrv/devops-extra/)
 
-Para fazer uso, basta fazer o clone ou o 
+Para fazer uso, basta fazer o `git clone` ou a atualização do nosso repositório local com o `git pull`, caso o repositório já exista.
 
 Segue abaixo o conteúdo do `Dockerfile` e, em seguida, é apresentada a personalização necessária para incluir os servidores do ambiente de produção.
 
