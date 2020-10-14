@@ -33,7 +33,7 @@
 ## 4. Infraestrutura como Código e Orquestração <a id="4-infraestrutura-como-codigo-e-orquestracao"></a>
 
 * [4.1 Introdução](4-infraestrutura-como-codigo-e-orquestracao/4-1-introducao.md)
-* [4.2 Docker Compose](4-infraestrutura-como-codigo-e-orquestracao/4-2-docker-compose.md)
+* [4.2 Orquestração com Docker Compose](4-infraestrutura-como-codigo-e-orquestracao/4-2-docker-compose.md)
 
 ## 5. Integração Contínua <a id="5-integracao-continua"></a>
 
