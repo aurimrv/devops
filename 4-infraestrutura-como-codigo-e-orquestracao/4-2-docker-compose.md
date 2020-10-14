@@ -183,5 +183,28 @@ No nosso exemplo, o servidor que demora mais a inicializar é o Servidor Web e, 
 
 ![Situa&#xE7;&#xE3;o normalizada ap&#xF3;s o in&#xED;cio completo do Servidor Web](../.gitbook/assets/monitor-02.png)
 
-Desse modo, como pudemos observar, foi possível concentrar a carga e a sequência desejada de início dos serviços em um único arquivo de configuração, facilitando a realização do deploy da aplicação no ambiente de produção. No próximo capítulo abordaremos o processo de integração contínua e entrega contínua que estão relacionadas ao ambiente de desenvolvimento e, posteriormente, de atualização do ambiente de produção se tudo correr conforme o esperado.
+Desse modo, como pudemos observar, foi possível concentrar a carga e a sequência desejada de início dos serviços em um único arquivo de configuração, facilitando a realização do deploy da aplicação no ambiente de produção. 
+
+Para verificar se os serviços estão em execução, podemos utilizar o comando docker ps, conforme ilustrado abaixo:
+
+```text
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+f9e73b7c431b        cap04_monitor       "/usr/local/bin/star…"   19 minutes ago      Up 18 minutes       0.0.0.0:80->80/tcp       cap04_monitor_1
+500f2bcaff46        cap04_web           "catalina.sh run"        19 minutes ago      Up 18 minutes       0.0.0.0:8080->8080/tcp   cap04_web_1
+f71bab817485        cap04_db            "docker-entrypoint.s…"   19 minutes ago      Up 19 minutes       0.0.0.0:3306->3306/tcp   cap04_db_1
+```
+
+Como é possível observar, ao final do processo, existem três contêineres em execução, decorrentes da execução do comando docker-compose up. Se necessário parar a execução dos serviços, basta executar o comando docker-compose stop, conforme ilustrado abaixo.
+
+```text
+$ docker-compose stop
+Stopping cap04_monitor_1 ... done
+Stopping cap04_web_1     ... done
+Stopping cap04_db_1      ... done
+```
+
+Observa-se que na parada dos serviços, o Docker Compose respeita a dependência e pára os serviços em ordem inversa da inicialização.
+
+No próximo capítulo abordaremos o processo de integração contínua e entrega contínua que estão relacionadas ao ambiente de desenvolvimento e, posteriormente, de atualização do ambiente de produção se tudo correr conforme o esperado.
 
