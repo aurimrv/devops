@@ -14,7 +14,7 @@ Desse modo, apesar de ser algo extremamente importante no cenário de desenvolvi
 
 De maneira geral, ainda não há uma tecnologia aceita como padrão, nem mesmo uma linguagem padrão para a escrita dos scripts de IaC, o que torna difícil, não apenas o desenvolvimento de ferramentas de qualidade, mas também a integração entre eles.
 
-A quantidade de tecnologias que fazem parte do Ecossistema  DevOps é imensa. A figura abaixo, extraída de [Cohen \(2016\)](https://dzone.com/articles/the-ultimate-devops-tools-ecosystem-tutorial-part), dá uma visão geral da quantidade de tecnologias envolvida nesse cenário, dificultando até mesmo o aprendizado no tema. Entretanto, espera-se que com o amadurecimento da tecnologia, padrões passem a serem desenvolvidos ou algumas das tecnologias atuais se tornem padrões de fato e o cenário comece a mudar para a melhor.
+A quantidade de tecnologias que fazem parte do Ecossistema DevOps é imensa. A figura abaixo, extraída de [Cohen \(2016\)](https://dzone.com/articles/the-ultimate-devops-tools-ecosystem-tutorial-part), dá uma visão geral da quantidade de tecnologias envolvida nesse cenário, dificultando até mesmo o aprendizado no tema. Entretanto, espera-se que com o amadurecimento da tecnologia, padrões passem a serem desenvolvidos ou algumas das tecnologias atuais se tornem padrões de fato e o cenário comece a mudar para a melhor.
 
 ![Ecossistema DevOps \(Fonte: Cohen, \(2016\)\)](../.gitbook/assets/ecossistema-devops.png)
 
