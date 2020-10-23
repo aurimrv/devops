@@ -37,11 +37,11 @@
 
 ## 5. Integração Contínua <a id="5-integracao-continua"></a>
 
-* [Untitled](5-integracao-continua/untitled.md)
+* [5.1 Introdução](5-integracao-continua/5-1-introducao.md)
 
-## 6. Pipeline de Entrega <a id="6-pipeline-de-entrega"></a>
+## 6. Entrega Contínua <a id="6-entrega-continua"></a>
 
-* [Untitled](6-pipeline-de-entrega/untitled.md)
+* [Untitled](6-entrega-continua/untitled.md)
 
 ## 7. Tópicos Avançados <a id="7-topicos-avancados"></a>
 

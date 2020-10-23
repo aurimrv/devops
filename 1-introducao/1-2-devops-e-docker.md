@@ -2,7 +2,7 @@
 
 Nesta seção faz-se uma introdução a DevOps e qual a sua relação com contêineres e, consequentemente, Docker.
 
-Desenvolvimento e Operações \(DevOps\) corresponde a ideia de unir duas áreas que eram consideradas conflitantes.  A idéia do DevOps é permitir que desenvolvimento, garantia de qualidade \(QA\), operações de TI e segurança da informação \(Infosec\) passem a trabalhar juntas e de maneira bastante integrada \([Kim et al., 2018](http://www.altabooks.com.br/produto/manual-de-devops-como-obter-agilidade-confiabilidade-e-seguranca-em-organizacoes-tecnologicas/)\).
+Desenvolvimento e Operações \(DevOps\) corresponde a ideia de unir duas áreas que eram consideradas conflitantes.  A ideia do DevOps é permitir que desenvolvimento, garantia de qualidade \(QA\), operações de TI e segurança da informação \(Infosec\) passem a trabalhar juntas e de maneira bastante integrada \([Kim et al., 2018](http://www.altabooks.com.br/produto/manual-de-devops-como-obter-agilidade-confiabilidade-e-seguranca-em-organizacoes-tecnologicas/)\).
 
 [Kim et al. \(2018\)](http://www.altabooks.com.br/produto/manual-de-devops-como-obter-agilidade-confiabilidade-e-seguranca-em-organizacoes-tecnologicas/) alerta que, em quase toda organização de TI há conflito entre a equipe de desenvolvimento e as operações de TI, necessárias para operacionalizar o desenvolvimento e distribuição do software. Tal conflito resulta em uma queda de desempenho e um tempo cada vez maior na entrega de melhorias nos produtos de software.
 
