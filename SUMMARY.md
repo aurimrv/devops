@@ -45,7 +45,7 @@
 
 ## 6. Entrega Contínua <a id="6-entrega-continua"></a>
 
-* [Untitled](6-entrega-continua/untitled.md)
+* [6.1 Introdução](6-entrega-continua/6-1-introducao.md)
 
 ## 7. Tópicos Avançados <a id="7-topicos-avancados"></a>
 
