@@ -38,6 +38,8 @@
 ## 5. Integração Contínua <a id="5-integracao-continua"></a>
 
 * [5.1 Introdução](5-integracao-continua/5-1-introducao.md)
+* [5.2 Controle de Versão](5-integracao-continua/5-2-controle-de-versao.md)
+* [5.3 Construindo o Projeto Utilizando Contêiner](5-integracao-continua/5-3-construindo-o-projeto-utilizando-conteiner.md)
 
 ## 6. Entrega Contínua <a id="6-entrega-continua"></a>
 
