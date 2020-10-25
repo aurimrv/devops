@@ -40,6 +40,8 @@
 * [5.1 Introdução](5-integracao-continua/5-1-introducao.md)
 * [5.2 Controle de Versão](5-integracao-continua/5-2-controle-de-versao.md)
 * [5.3 Construindo o Projeto Utilizando Contêiner](5-integracao-continua/5-3-construindo-o-projeto-utilizando-conteiner.md)
+* [5.4 Garantindo Acesso de Desenvolvedor nas Plataformas por meio de Tokens](5-integracao-continua/5-4-tokens-acesso.md)
+* [5.5 Integrando GitLab e GitHub](5-integracao-continua/5-5-integrando-gitlab-e-github.md)
 
 ## 6. Entrega Contínua <a id="6-entrega-continua"></a>
 
