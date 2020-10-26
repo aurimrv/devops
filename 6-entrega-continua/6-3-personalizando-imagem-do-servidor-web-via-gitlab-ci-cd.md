@@ -116,5 +116,11 @@ Finalmente, abaixo tem uma breve descrição dos estágios propostos no pipeline
 
 Novamente, vale ressaltar que esse último passo poderia ser realizado de modo que a nova versão da aplicação seja encaminhar para um Ambiente de Produção na nuvem e o usuário, imediatamente, passasse a executar a versão atualizada da Loja Virtual. Numa versão futura desse livro daremos mais detalhes sobre isso. Por hora, os interessados, podem consultar diferentes artigos na rede que falam sobre o assunto. Na documentação oficial do GitLab tem exemplos para algumas nuvens \([https://docs.gitlab.com/ee/ci/cloud\_deployment/](https://docs.gitlab.com/ee/ci/cloud_deployment/)\). 
 
+### Validando o Funcionamento do Pipeline de CI/CD
+
+Para demonstrar o funcionamento, basta editarmos o arquivo .gitlab-ci.yml e, ao confirmar a alteração, avaliarmos o resultado final obtido.
+
+
+
 
 
