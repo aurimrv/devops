@@ -120,7 +120,17 @@ Novamente, vale ressaltar que esse último passo poderia ser realizado de modo q
 
 Para demonstrar o funcionamento, basta editarmos o arquivo .gitlab-ci.yml e, ao confirmar a alteração, avaliarmos o resultado final obtido.
 
+Primeiramente, apenas para comparação, observa-se que a última atualização da imagem do Servidor Web no Hub Docker ocorreu a dois dias atrás.
 
+![Estado da imagem do Servidor Web no Hub Docker](../.gitbook/assets/hub-docker-02.png)
+
+Em seguida, após editar e confirmar a alteração no arquivo .gitlab-ci.yml, conforme conteúdo apresentado acima, tem-se início a execução do pipeline definido.
+
+![Confirmado altera&#xE7;&#xE3;o no pipeline](../.gitbook/assets/gitlab-02%20%281%29.png)
+
+![In&#xED;cio da execu&#xE7;&#xE3;o do pipeline](../.gitbook/assets/gitlab-03%20%281%29.png)
+
+![Est&#xE1;gio parcial da execu&#xE7;&#xE3;o](../.gitbook/assets/gitlab-04%20%281%29.png)
 
 
 
