@@ -132,5 +132,9 @@ Em seguida, após editar e confirmar a alteração no arquivo .gitlab-ci.yml, co
 
 ![Est&#xE1;gio parcial da execu&#xE7;&#xE3;o](../.gitbook/assets/gitlab-04%20%281%29.png)
 
+![T&#xE9;rmino do pipeline com sucesso](../.gitbook/assets/gitlab-05%20%281%29.png)
 
+Após o témino do fluxo CI/CD definido, conforme era de se esperar, a imagem do Servidor Web foi atualizada no Jub Docker.
+
+![Imagem do Servidor Web Atualizada pelo processo de CI/CD](../.gitbook/assets/hubdocker-03.png)
 
