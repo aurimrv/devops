@@ -107,3 +107,14 @@ Observa-se também, na linha 3 o uso da cláusula `variables` que, nesse escopo,
 
 Outra novidade presente nesse script é o uso da cláusula `artifacts` em dois jobs. No primeiro,  `maven-test,` ela é usada para indicar que, como resultado desse job, podem ser gerados arquivos de relatório do JUnit, nos locais indicados. No segundo, `maven-package`, ela é usada para indicar o arquivo representando o pacote de distribuição da aplicação: `devopsnapratica.war`.
 
+Finalmente, abaixo tem uma breve descrição dos estágios propostos no pipeline, qual job é executado, e o que aconece em cada um deles:
+
+1. `build`: executa o job `maven-build` responsável pela compilação dos códigos fonte e de teste da aplicação;
+2. `test`: executa o job `maven-test`, responsável pela execução dos testes na aplicação e posterior geração dos relatórios sobre a execução dos testes;
+3. `package`: executa o job `maven-package` que é responsável por empacotar todo o código da aplicação e, em seguida, copiar o arquivo `devopsnapratica.war` para dentro da subpasta `docker-img/web/` pois esse arquivo será utilizado no último estágio do pipeline;
+4. `deploy`: executa o job `docker-deploy` que faz a construção da imagem Docker conforme `Dockerfile` localizado em `docker-img/web/`, gerando a imagem denominada `$DOCKER_ID/tomcat-server-img`. Em seguida, é feita a autenticação no Hub Docker por meio de `DOCKER_ID` e `DOCKER_TOKEN` e, em seguida, a imagem do Servidor Web com a última versão do arquivo `devopsnapratica.war` é enviada para o Hub Docker e pode ser utilizada para a reinicialização do Servidor Web.
+
+Novamente, vale ressaltar que esse último passo poderia ser realizado de modo que a nova versão da aplicação seja encaminhar para um Ambiente de Produção na nuvem e o usuário, imediatamente, passasse a executar a versão atualizada da Loja Virtual. Numa versão futura desse livro daremos mais detalhes sobre isso. Por hora, os interessados, podem consultar diferentes artigos na rede que falam sobre o assunto. Na documentação oficial do GitLab tem exemplos para algumas nuvens \([https://docs.gitlab.com/ee/ci/cloud\_deployment/](https://docs.gitlab.com/ee/ci/cloud_deployment/)\). 
+
+
+
