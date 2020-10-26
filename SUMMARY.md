@@ -42,6 +42,7 @@
 * [5.3 Construindo o Projeto Utilizando Contêiner](5-integracao-continua/5-3-construindo-o-projeto-utilizando-conteiner.md)
 * [5.4 Garantindo Acesso de Desenvolvedor nas Plataformas por meio de Tokens](5-integracao-continua/5-4-tokens-acesso.md)
 * [5.5 Integrando GitLab e GitHub](5-integracao-continua/5-5-integrando-gitlab-e-github.md)
+* [5.6 Pipeline de Integração Contínua com GitLab CI/CD](5-integracao-continua/5-6-pipeline-de-integracao-continua-com-gitlab-ci-cd.md)
 
 ## 6. Entrega Contínua <a id="6-entrega-continua"></a>
 
