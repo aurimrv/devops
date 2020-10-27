@@ -71,7 +71,7 @@ Successfully tagged aurimrv/mysql-server-img:latest
 
 ```
 
-Ao final desse processo temos uma imagem denominada aurimrv/mysql-server-img, criada e armazenada localmente. Agora vamos enviá-la para o Hub Docker. Para isso você precisa saber o seu DOCKER\_ID e o seu DOCKER\_TOKEN. Ambos serão utilizados no processo. Ao ser solicitada a Password, simplesmente copie e cole o seu token de acesso de desenvolvedor na platadorma Hub Docker.
+Ao final desse processo temos uma imagem denominada aurimrv/mysql-server-img, criada e armazenada localmente. Agora vamos enviá-la para o Hub Docker. Para isso você precisa saber o seu `DOCKER_ID` e o seu `DOCKER_TOKEN`. Ambos serão utilizados no processo. Ao ser solicitada a Password, simplesmente copie e cole o seu token de acesso de desenvolvedor na platadorma Hub Docker.
 
 ```text
 $ docker login -u aurimrv
