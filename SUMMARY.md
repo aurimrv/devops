@@ -51,7 +51,3 @@
 * [6.3 Personalizando Imagem do Servidor Web via GitLab CI/CD](6-entrega-continua/6-3-personalizando-imagem-do-servidor-web-via-gitlab-ci-cd.md)
 * [6.4 Restaurando Ambiente de Produção](6-entrega-continua/6.4-restaurando-ambiente-de-producao.md)
 
-## 7. Tópicos Avançados <a id="7-topicos-avancados"></a>
-
-* [Untitled](7-topicos-avancados/untitled.md)
-
